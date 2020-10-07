@@ -22,5 +22,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a single-line script
-        run: curl -X POST -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/MyCoolProjects/ShopManager/dispatches -d '{"event_type":"ping_repo"}'
+        run: |
+          curl -X POST -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/MyCoolProjects/ShopManager/dispatches -d '{"event_type":"ping_repo"}'.
            
