@@ -23,7 +23,7 @@ const MyForm = (props) => {
                 <Button type="submit">Add</Button>
             </Form>
         </div>
-    ); //CI test2
+    ); //CI test3
 } 
 
 export default MyForm;
