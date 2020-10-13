@@ -65,8 +65,7 @@ export default class Product_Card extends Component {
 
         <Row>
           <Col >
-            <Button className="Button-add-cart"><b>В корзину</b></Button>
-          </Col>
+          <Button className="btn-add-cart" id="addcart" onClick={this.onOpenModal}><b>В корзину</b></Button>          </Col>
         </Row>
 
         {/* //лишняя для карточки инфа

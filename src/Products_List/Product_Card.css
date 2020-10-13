@@ -1,13 +1,13 @@
 .all_product_card{
   height: 400px;
-  background-color: rgb(129, 129, 28);
+  background-color: rgb(100, 100, 100);
 }
 .Card-img{
   text-align: center;
 }
 .Card-title{
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
 }
 .Card-rating{
   text-align: center;
@@ -16,14 +16,14 @@
   text-align: end;
   font-size: 20x;
 }
-.Button-add-cart{
+.btn-add-cart{
   text-align: center;
-  color: rgb(42, 165, 89);
+  color: rgb(250, 70, 70);
   background: rgba(100, 100, 100);
   border-radius: 6px;
 }
-.Button-add-cart:hover{
-  color: rgb(206, 153, 153);
+.btn-add-cart:hover{
+  color: rgb(150, 50, 50);
   background: rgb(30, 30, 30);
   border-radius: 10px;
   transition: all 0.3s ease-out;
