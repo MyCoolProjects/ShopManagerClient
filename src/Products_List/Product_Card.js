@@ -12,14 +12,12 @@ export default class Product_Card extends Component {
       </span>
 
     );
-
+    // возвращает рейтинг товара относительно параметра {product.reating}
     const StarRating = props => {
       const [rating] = React.useState(
         typeof props.rating == "number" ? props.rating : 0
       );
       const [selection] = React.useState(0);
-
-
 
       return (
         <div>
@@ -34,20 +32,10 @@ export default class Product_Card extends Component {
       );
     };
 
-
-
-
-
-
-
-
-
-
-
-
+    // JОписани карточки товара
     const productItems = this.props.products.map(product => (
       <Card className="product_card">
-        <a href={`/product/${product.id}`} >
+        {/* <a href={`/product/${product.id}`} > */}
           <Row >
             <Col key={product.id}>
               <img src={`products_img/${product.sku}.jpg`} alt="image-tovara" />
@@ -55,9 +43,9 @@ export default class Product_Card extends Component {
             </Col>
           </Row>
           <Row><Col style={{ textAlign: 'center' }}><StarRating rating={product.reating} /></Col></Row>
-        </a>
+        {/* </a> */}
 
-        <Row>
+        {/* <Row>
           <Col>
             <ul >
               <li>{product.description1}</li>
@@ -70,7 +58,7 @@ export default class Product_Card extends Component {
               <li>{product.description8}</li>
             </ul>
           </Col>
-        </Row>
+        </Row> */}
 
 
         <Row>
