@@ -57,7 +57,7 @@ export default class Product_Card extends Component {
           <Row><Col style={{ textAlign: 'center' }}><StarRating rating={product.reating} /></Col></Row>
         </a>
 
-        {/* <Row>
+        <Row>
           <Col>
             <ul >
               <li>{product.description1}</li>
@@ -70,7 +70,7 @@ export default class Product_Card extends Component {
               <li>{product.description8}</li>
             </ul>
           </Col>
-        </Row> */}
+        </Row>
 
 
         <Row>
