@@ -32,20 +32,46 @@ export default class Product_Card extends Component {
       );
     };
 
-    // JОписани карточки товара
+    // Описани карточки товара
     const productItems = this.props.products.map(product => (
-      <Card className="product_card">
+      <Card className="all_product_card" key={product.id} >
+
         {/* <a href={`/product/${product.id}`} > */}
-          <Row >
-            <Col key={product.id}>
-              <img src={`products_img/${product.sku}.jpg`} alt="image-tovara" />
-              <div>{product.title}</div>
-            </Col>
-          </Row>
-          <Row><Col style={{ textAlign: 'center' }}><StarRating rating={product.reating} /></Col></Row>
+
+        <Row className="Card-img">
+          <Col >
+            <img src={`products_img/${product.sku}.jpg`} alt="image-tovara" />
+          </Col>
+        </Row>
+
+        <Row className="Card-title">
+          <Col >
+            <div>{product.title}</div>
+          </Col>
+        </Row>
+
+        <Row className="Card-rating">
+          <Col>
+            <StarRating rating={product.reating} />
+          </Col>
+        </Row>
         {/* </a> */}
 
-        {/* <Row>
+
+        <Row className="price">
+          <Col>
+            <span ><b>{product.price} ₽</b></span>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col >
+            <Button className="Button-add-cart"><b>В корзину</b></Button>
+          </Col>
+        </Row>
+
+        {/* //лишняя для карточки инфа
+        <Row>
           <Col>
             <ul >
               <li>{product.description1}</li>
@@ -58,21 +84,11 @@ export default class Product_Card extends Component {
               <li>{product.description8}</li>
             </ul>
           </Col>
-        </Row> */}
-
-
-        <Row>
-          <Col >
-            <span >{product.price} ₽</span>
-          </Col>
         </Row>
+        */}
 
 
-        <Row>
-          <Col >
-            <Button>В корзину</Button>
-          </Col>
-        </Row>
+
 
       </Card >
     ));
