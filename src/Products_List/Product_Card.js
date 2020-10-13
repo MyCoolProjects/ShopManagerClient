@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Row, Col, Card, Button, Container, CardColumns, CardImg } from 'react-bootstrap';
-import { Link, animateScroll as scroll } from "react-scroll";
 import './Product_Card.css'
 
 export default class Product_Card extends Component {

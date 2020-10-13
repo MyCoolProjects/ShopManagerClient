@@ -1,29 +1,29 @@
 .all_product_card{
-  height: 500px;
-  background-color: rgb(255, 255, 177);
+  height: 400px;
+  background-color: rgb(129, 129, 28);
 }
 .Card-img{
   text-align: center;
 }
 .Card-title{
   text-align: center;
-  font-size: 16px;
+  font-size: 24px;
 }
 .Card-rating{
   text-align: center;
 }
 .price{
   text-align: end;
-  font-size: 10px;
+  font-size: 20x;
 }
 .Button-add-cart{
   text-align: center;
-  color: rgb(250, 70, 70);
+  color: rgb(42, 165, 89);
   background: rgba(100, 100, 100);
   border-radius: 6px;
 }
 .Button-add-cart:hover{
-  color: rgb(150, 50, 50);
+  color: rgb(206, 153, 153);
   background: rgb(30, 30, 30);
   border-radius: 10px;
   transition: all 0.3s ease-out;
