@@ -8,14 +8,14 @@ export default class Header extends Component {
 
         <Navbar className="header" collapseOnSelect expand="md">
 
-          <Navbar.Collapse style={{ textAlign: "center" }}>
-            <Nav className="menu" style={{ textAlign: "center" }} >
+          <Navbar.Collapse >
+            <Nav className="menu" >
 
               <ul>
-                <li><a href="/shopmanager.com">Home</a></li>
-                <li><a href="/products_list" >Products List</a></li>
-                <li><a href="/product" >Product</a></li>
-                <li><a >Курсы</a>
+                <li><a href="/"><i className="fa fa-home"></i>Home</a></li>
+                <li><a href="/products_list" ><i className="fa fa-Product-List"></i>Products List</a></li>
+                <li><a href="/product" ><i className="fa fa-Product"></i>Product</a></li>
+                <li><a><i className="fa fa-Product"></i>Курсы</a>
                   <ul>
                     <li><a href="/product">Категория B (МКПП)</a></li>
                     <li><a href="/product">Категория B (АКПП)</a></li>
@@ -24,6 +24,7 @@ export default class Header extends Component {
                     <li><a href="/product">Категория A1</a></li>
                     <li><a href="/product">Категория M</a></li>
                   </ul>
+
                 </li>
                 {/*
                                           
