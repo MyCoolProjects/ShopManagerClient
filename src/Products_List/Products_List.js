@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Container, Row, Col, CardColumns, FormCheck, Form } from "react-bootstrap"
+import { Container, Row, Col, CardColumns, Form } from "react-bootstrap"
 // const Product_Card = lazy(() => import('./Product_Card.js'))
 import Product_Card from "./Product_Card.js"
 import './Product_Card.css'
