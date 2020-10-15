@@ -1,6 +1,5 @@
-import React, { Component, lazy } from "react"
-import { Container, Row, Col, CardColumns, Card, Button, Select } from "react-bootstrap"
-import { Link, animateScroll as scroll } from "react-scroll"
+import React, { Component} from "react"
+import { Container, Row, Col, CardColumns} from "react-bootstrap"
 // const Product_Card = lazy(() => import('./Product_Card.js'))
 import Product_Card from "./Product_Card.js"
 import './Product_Card.css'
@@ -29,11 +28,32 @@ class Products_List extends Component {
 
     return (
       <>
-        <Container fluid >
+        <Container fluid className="pt-3">
           <Row>
 
             <Col sm={3} > {/* катекогрии фильтры и прочее */}
               <div>КАТЕГОРИИ И ФИЛЬТРЫ</div>
+              <select className="select-css">
+                <option selected>Сначала дешевле</option>
+                <option  >Сначала дороже</option>
+                <option>Сначала с высоким рейтингом</option>
+                <option>Сначала со скидкой</option>
+              </select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </Col>
 
 
