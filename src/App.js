@@ -1,9 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-
-
-
 import Header from './Header/Header.js';
 //import Footer from './Footer/Footer.js';
 import Home from './Home/Home.js';
@@ -20,10 +17,10 @@ function App() {
     <BrowserRouter>
       <Header></Header>
       <Switch>
-        <Route exact path="/" component={Home}></Route>
-        <Route path="/shopmanager.com" component={Home}></Route>
-        <Route path="/products_list" component={Products_List}></Route>
-        <Route path="/product" component={Product}></Route>
+        <Route exact path="/" component={Home}/>
+        <Route path="/shopmanager.com" component={Home}/>
+        <Route path="/products_list" component={Products_List}/>
+        <Route path="/product" component={Product}/>
         {/*
         <Route component={Error}/>
         */}
