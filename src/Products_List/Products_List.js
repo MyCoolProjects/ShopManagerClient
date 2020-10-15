@@ -3,6 +3,7 @@ import { Container, Row, Col, CardColumns, Card } from "react-bootstrap"
 import { Link, animateScroll as scroll } from "react-scroll"
 // const Product_Card = lazy(() => import('./Product_Card.js'))
 import Product_Card from "./Product_Card.js"
+import './Product_Card.css'
 class Products_List extends Component {
   constructor() {
     super();
@@ -48,7 +49,7 @@ class Products_List extends Component {
 
               <Row>
                 <Col>
-                  <CardColumns> {/* список товаров */}
+                  <CardColumns className="space-behind-product-card">  {/* список товаров */}
                     <Product_Card products={this.state.products} />
                   </CardColumns>
                 </Col>

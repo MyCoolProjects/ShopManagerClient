@@ -33,58 +33,61 @@ export default class Product_Card extends Component {
 
     // Описани карточки товара
     const productItems = this.props.products.map(product => (
-      <Card className="all_product_card" key={product.id} >
-
-        {/* <a href={`/product/${product.id}`} > */}
-
+      <Card bg="white" key={product.id} style={{border: '0px'}}>
         <Row >
-          <Col className="Card-img">
-            <img src={`products_img/${product.sku}.jpg`} alt="image-tovara" />
+          <Col className="Product-card">
+            {/* <a href={`/product/${product.id}`} > */}
+
+            <Row >
+              <Col className="Card-img">
+                <img src={`products_img/${product.sku}.jpg`} alt="image-tovara" />
+              </Col>
+            </Row>
+
+            <Row className="Card-title">
+              <Col >
+                <div>{product.title}</div>
+              </Col>
+            </Row>
+
+            <Row className="Card-rating">
+              <Col>
+                <StarRating rating={product.reating} />
+              </Col>
+            </Row>
+            {/* </a> */}
+
+
+            <Row className="price">
+              <Col>
+                <span ><b>{product.price} ₽</b></span>
+              </Col>
+            </Row>
+
+            <Row>
+              <Col className="btn-add-cart">
+                <Button id="addcart" ><b>В корзину</b></Button>
+              </Col>
+            </Row>
+
+            {/* //лишняя для карточки инфа
+              <Row>
+                <Col>
+                  <ul >
+                    <li>{product.description1}</li>
+                    <li>{product.description2}</li>
+                    <li>{product.description3}</li>
+                    <li>{product.description4}</li>
+                    <li>{product.description5}</li>
+                    <li>{product.description6}</li>
+                    <li>{product.description7}</li>
+                    <li>{product.description8}</li>
+                  </ul>
+                </Col>
+              </Row>
+            */}
           </Col>
         </Row>
-
-        <Row className="Card-title">
-          <Col >
-            <div>{product.title}</div>
-          </Col>
-        </Row>
-
-        <Row className="Card-rating">
-          <Col>
-            <StarRating rating={product.reating} />
-          </Col>
-        </Row>
-        {/* </a> */}
-
-
-        <Row className="price">
-          <Col>
-            <span ><b>{product.price} ₽</b></span>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col className="btn-add-cart">
-            <Button id="addcart" ><b>В корзину</b></Button>
-          </Col>
-        </Row>
-
-        {/* //лишняя для карточки инфа
-        <Row>
-          <Col>
-            <ul >
-              <li>{product.description1}</li>
-              <li>{product.description2}</li>
-              <li>{product.description3}</li>
-              <li>{product.description4}</li>
-              <li>{product.description5}</li>
-              <li>{product.description6}</li>
-              <li>{product.description7}</li>
-              <li>{product.description8}</li>
-            </ul>
-          </Col>
-        </Row>
-        */}
 
 
 

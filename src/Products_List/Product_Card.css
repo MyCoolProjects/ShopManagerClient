@@ -1,8 +1,9 @@
-.all_product_card{
-  height: 400px;
+.space-behind-product-card{
   background-color: rgb(112, 61, 61);
   border: 0px;
-  width: 500px;
+}
+.Product-card{
+  width: 200px;
 }
 .Card-img{
   text-align: center;
@@ -30,6 +31,7 @@
 }
 .btn-add-cart{
   padding: 10px 0px 0px 0px;
+  margin-bottom: 10px;
   text-align: center;
 }
 .btn-add-cart button{
