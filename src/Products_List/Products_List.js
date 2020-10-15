@@ -42,9 +42,9 @@ class Products_List extends Component {
 
               <Row>
                 <Col className="filter-2"> {/* катекогрии фильтры и прочее */}
-                  <select>
+                  <select className="select-css">
                     <option>Сначала дешевле</option>
-                    <option>Сначала дороже</option>
+                    <option selected >Сначала дороже</option>
                     <option>Сначала с высоким рейтингом</option>
                     <option>Сначала со скидкой</option>
                   </select>
