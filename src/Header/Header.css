@@ -1,21 +1,20 @@
 .header{
     height: 425px;
-    background-color: rgb(63, 63, 63);
-    
+    background-color: darkblue;
     border-bottom: 1px solid  rgb(40, 40, 40);
 }
 .menu{
     border-bottom: 1px solid ivory;
+    padding: 0px;
+    
 }
 .menu *{
     margin: 0;
     padding: 0;
-    color: ivory;
     font-family: Arial, Helvetica, sans-serif;    
 }
 .menu ul,
 .menu.il{
-    
     list-style: none;
 }
 .date{
@@ -24,9 +23,8 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 .menu > ul{
-    vertical-align: top;
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
 .menu > ul li a{
     display: block;
@@ -44,8 +42,8 @@
 }
 
 .menu > ul li > a i.fa{
-    position: relative;
-    top: 125px;
+    position: absolute;
+    top: 15px;
     left: 10px;
     font-size: 14px;
 }
