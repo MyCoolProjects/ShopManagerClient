@@ -1,32 +1,43 @@
 .all_product_card{
   height: 400px;
-  background-color: rgb(100, 100, 100);
+  color: rgb(112, 61, 61);
 }
 .Card-img{
   text-align: center;
 }
+.Card-img img{
+  size: cover;
+  height: 200px;
+}
 .Card-title{
   text-align: center;
   font-size: 20px;
+  height: 60px;
 }
 .Card-rating{
-  text-align: center;
+  text-align: end;
+  color: #ff9933;
+  padding-right: 3px;
+  cursor: default;
+  font-size: 30px;
 }
 .price{
   text-align: end;
-  font-size: 20x;
+  font-size: 24px;
+  padding-right: 5px;
 }
 .btn-add-cart{
+  padding: 10px 0px 0px 0px;
   text-align: center;
-  color: rgb(250, 70, 70);
-  background: rgba(100, 100, 100);
-  border-radius: 6px;
 }
-.btn-add-cart:hover{
-  color: rgb(150, 50, 50);
-  background: rgb(30, 30, 30);
-  border-radius: 10px;
-  transition: all 0.3s ease-out;
-  -webkit-transform: scale(1.01);
-  box-shadow: 10px 10px 20px -5px black;
+.btn-add-cart button{
+  text-align: center;
+  color:rgb(255, 255, 240);
+  background: rgb(230, 40, 40);
+  border: 0px;
+  border-radius: 5px;
+}
+.btn-add-cart button:hover{
+  background: rgb(190, 30, 30);
+  transition: all 0.1s ease-out;
 }

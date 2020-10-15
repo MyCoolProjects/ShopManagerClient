@@ -6,7 +6,7 @@ export default class Product_Card extends Component {
 
   render() {
     const Star = ({ marked, starId }) => (
-      <span className="rating-processors" star-id={starId} role="button" style={{ color: "#ff9933" }}>
+      <span className="Card-rating" star-id={starId} role="button">
         {marked ? "\u2605" : "\u2606"}
       </span>
 
@@ -37,8 +37,8 @@ export default class Product_Card extends Component {
 
         {/* <a href={`/product/${product.id}`} > */}
 
-        <Row className="Card-img">
-          <Col >
+        <Row >
+          <Col className="Card-img">
             <img src={`products_img/${product.sku}.jpg`} alt="image-tovara" />
           </Col>
         </Row>
@@ -64,8 +64,9 @@ export default class Product_Card extends Component {
         </Row>
 
         <Row>
-          <Col >
-          <Button className="btn-add-cart" id="addcart" onClick={this.onOpenModal}><b>В корзину</b></Button>          </Col>
+          <Col className="btn-add-cart">
+            <Button id="addcart" ><b>В корзину</b></Button>
+          </Col>
         </Row>
 
         {/* //лишняя для карточки инфа
