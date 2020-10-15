@@ -1,48 +1,41 @@
-import React, { Component } from 'react';
-import { Navbar, Nav, Container, Row, Col } from 'react-bootstrap';
+import React, { Component } from 'react'
+import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Header.css';
+import icon_search from './search-64.png'
 export default class Header extends Component {
   render() {
     return (
       <>
 
-        <Navbar collapseOnSelect expand="md">
-          <Container className="header" fluid>
-            <Navbar.Collapse >
-              <Nav className="menu" >
-
-                <ul>
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/products_list" >Products List</a></li>
-                  <li><a href="/product" >Product</a></li>
-                  <li><a href="/">Курсы</a>
-                    <ul>
-                      <li><a href="/product">Категория B (МКПП)</a></li>
-                      <li><a href="/product">Категория B (АКПП)</a></li>
-                      <li><a href="/product">Категория BE</a></li>
-                      <li><a href="/product">Категория A</a></li>
-                      <li><a href="/product">Категория A1</a></li>
-                      <li><a href="/product">Категория M</a></li>
-                    </ul>
-
-                  </li>
-                  {/*
-                                          
-                      <li><a href="/prices" ><i className="fa fa-prices"></i>Цены</a></li>
-                      <li><a href="/contacts" ><i className="fa fa-prices"></i>Контакты</a></li>
-                      <li><a href="/test" ><i className="fa fa-test"></i>Тесты</a></li>
-                     */}
-                </ul>
-              </Nav>
-            </Navbar.Collapse>
-
-          </Container>
-
+        <Navbar className="header" collapseOnSelect expand="md">
+          <Navbar.Brand>Website 69</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse className="m-auto" id="responsive-navbar-nav">
+
+            <Nav className="menu mr-auto">
+              <Nav.Link><Link className="link" to="/">Home</Link></Nav.Link>
+              <Nav.Link><Link className="link" to="/products_list">Products List</Link></Nav.Link>
+              <Nav.Link><Link className="link" to="/product">Product</Link></Nav.Link>
+              <Nav.Link><Link className="link" to="/product">?????</Link></Nav.Link>
+
+            </Nav>
+
+            <Form inline className="ml-auto mr-5" style={{ textAlign: "right" }}>
+              <FormControl type="text" placeholder="Search" className=" mr-sm-2" />
+              <Button variant="outline-danger">
+                <span><img src={icon_search} alt="icon_search" style={{ width: "20%" }} /></span>Search
+              </Button>
+            </Form>
+
+            <Nav className="ml-5" >
+              <Button variant="danger" className="mr-3">Log In</Button>
+              <Button variant="danger">Sign out</Button>
+            </Nav>
+
+          </Navbar.Collapse>
 
         </Navbar>
-
-
       </>
     )
   }
