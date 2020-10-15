@@ -1,5 +1,38 @@
+.filter-2{
+  text-align: end;
+  
+}
+.filter-2 select{
+  text-align: center;
+  margin-right: 100px;
+  color:rgb(190, 30, 30);
+  background-color: rgb(255, 255, 255);
+  border: 0px;
+}
+.filter-2 button:hover{
+  color:  rgb(0, 0, 0);
+  transition: all 0.1s ease-out;
+  background-color: rgb(255, 255, 255);
+  border: 0px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .space-behind-product-card{
-  background-color: rgb(112, 61, 61);
+  background-color:rgb(167, 167, 167);
+  /* background-color:rgb(71, 11, 11); */
   border: 0px;
 }
 .Product-card{
@@ -36,12 +69,14 @@
 }
 .btn-add-cart button{
   text-align: center;
-  color:rgb(255, 255, 240);
-  background: rgb(230, 40, 40);
-  border: 0px;
+  color:rgb(190, 30, 30);
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(190, 30, 30);
   border-radius: 5px;
 }
 .btn-add-cart button:hover{
   background: rgb(190, 30, 30);
+  color:  rgb(255, 255, 255);
+  border: 1px solid rgb(190, 30, 30);
   transition: all 0.1s ease-out;
 }

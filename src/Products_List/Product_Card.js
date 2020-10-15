@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Row, Col, Card, Button, Container, CardColumns, CardImg } from 'react-bootstrap';
 import './Product_Card.css'
-
+import sopping_cart from './shopping-cart-32.png'
 export default class Product_Card extends Component {
 
   render() {
@@ -33,7 +33,7 @@ export default class Product_Card extends Component {
 
     // Описани карточки товара
     const productItems = this.props.products.map(product => (
-      <Card bg="white" key={product.id} style={{border: '0px'}}>
+      <Card bg="white" key={product.id} >
         <Row >
           <Col className="Product-card">
             {/* <a href={`/product/${product.id}`} > */}
@@ -66,7 +66,7 @@ export default class Product_Card extends Component {
 
             <Row>
               <Col className="btn-add-cart">
-                <Button id="addcart" ><b>В корзину</b></Button>
+                <Button variant="danger" id="addcart" ><span><img src={sopping_cart} style={{width: "20%"}}/> <b>В корзину</b></span></Button>
               </Col>
             </Row>
 

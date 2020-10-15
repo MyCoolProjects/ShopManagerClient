@@ -1,9 +1,10 @@
 import React, { Component, lazy } from "react"
-import { Container, Row, Col, CardColumns, Card } from "react-bootstrap"
+import { Container, Row, Col, CardColumns, Card, Button, Select } from "react-bootstrap"
 import { Link, animateScroll as scroll } from "react-scroll"
 // const Product_Card = lazy(() => import('./Product_Card.js'))
 import Product_Card from "./Product_Card.js"
 import './Product_Card.css'
+
 class Products_List extends Component {
   constructor() {
     super();
@@ -25,7 +26,7 @@ class Products_List extends Component {
   };
 
   render() {
-    
+
     return (
       <>
         <Container fluid >
@@ -40,14 +41,20 @@ class Products_List extends Component {
             <Col sm={9} >
 
               <Row>
-                <Col> {/* катекогрии фильтры и прочее */}
-                  <div>КАТЕГОРИИ И ФИЛЬТРЫ ПО ЦЕНЕ И ПРОЧАЯ ФИГНЯ</div>
+                <Col className="filter-2"> {/* катекогрии фильтры и прочее */}
+                  <select>
+                    <option>Сначала дешевле</option>
+                    <option>Сначала дороже</option>
+                    <option>Сначала с высоким рейтингом</option>
+                    <option>Сначала со скидкой</option>
+                  </select>
+                  <hr />
                 </Col>
               </Row>
 
 
 
-              <Row>
+              <Row style={{ paddingTop: "20px" }}>
                 <Col>
                   <CardColumns className="space-behind-product-card">  {/* список товаров */}
                     <Product_Card products={this.state.products} />
