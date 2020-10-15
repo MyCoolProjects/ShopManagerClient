@@ -1,12 +1,14 @@
 .header{
     height: 425px;
-    background-color: darkblue;
+    background-color: rgb(178, 178, 194);
     border-bottom: 1px solid  rgb(40, 40, 40);
+    vertical-align: bottom;
 }
 .menu{
     border-bottom: 1px solid ivory;
     padding: 0px;
-    
+    margin: 0px;
+
 }
 .menu *{
     margin: 0;
@@ -38,15 +40,9 @@
 }
 .menu > ul li {
     position: relative;
-    border-right: -1px solid rgb(30, 30, 30);
+    border-right: -1px solid rgb(187, 31, 31);
 }
 
-.menu > ul li > a i.fa{
-    position: absolute;
-    top: 15px;
-    left: 10px;
-    font-size: 14px;
-}
 .menu li:hover > ul {
     border-top: 1px solid rgb(220, 170, 30);
     border-left: 1px solid rgb(220, 170, 30);
