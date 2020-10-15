@@ -9,7 +9,7 @@ export default class Header extends Component {
       <>
 
         <Navbar className="header" collapseOnSelect expand="md">
-          <Navbar.Brand>Website 69</Navbar.Brand>
+          <Navbar.Brand>Web LOGO</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse className="m-auto" id="responsive-navbar-nav">
 
