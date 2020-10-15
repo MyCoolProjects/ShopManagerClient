@@ -1,0 +1,79 @@
+.header{
+    height: 425px;
+    border-bottom: 1px solid  rgb(40, 40, 40);
+}
+.menu{
+    border-bottom: 1px solid ivory;
+}
+.menu *{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;    
+}
+.menu ul,
+.menu.il{
+    list-style: none;
+}
+.date{
+    color: ivory;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.menu > ul{
+    display: flex;
+    justify-content: center;
+}
+.menu > ul li a{
+    display: block;
+    background: rgba(255, 255, 255, 0);
+    color: ivory;
+    padding: 10px 80px 10px 80px;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+.menu > ul li {
+    position: relative;
+    border-right: -1px solid rgb(30, 30, 30);
+}
+
+.menu > ul li > a i.fa{
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    font-size: 14px;
+}
+.menu li:hover > ul {
+    border-top: 1px solid rgb(220, 170, 30);
+    border-left: 1px solid rgb(220, 170, 30);
+}
+
+
+
+.menu li a:hover{
+    background: rgba(255, 255, 255, 0.3);
+    color: rgb(255, 210, 90);
+    box-shadow: 5px 10px 15px -5px black;
+    /* border-bottom: 1px double rgb(255, 210, 90);  */
+    transition: all 0.3s ease;
+}
+
+.menu li ul{
+    position: absolute;
+    min-width: 223px;
+    display: none;
+}
+.menu li> ul li {
+    border-bottom: 1px solid rgb(30, 30, 30);
+    border-right: 1px solid rgb(30, 30, 30);
+}
+.menu li > ul li a{
+    padding: 10px 20px 10px 10px;
+    text-align: left;
+    text-transform: none;
+    background:  rgb(50, 50, 50);
+}
+.menu li:hover > ul{
+    display: block;
+}

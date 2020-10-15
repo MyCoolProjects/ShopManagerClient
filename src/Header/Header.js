@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, Image, Row, Col } from 'react-bootstrap';
-//import './Header.css';
+import './Header.css';
 export default class Header extends Component {
   render() {
     return (
@@ -11,9 +11,9 @@ export default class Header extends Component {
               <Navbar.Collapse className="resposive-navbar-nav " style={{ textAlign: "center" }}>
                 <Nav className="menu" style={{ textAlign: "center" }} >
                   <ul>
-                    <li><a href="/shopmanager.com"><i className="fa fa-home"></i>Home</a></li>
-                    <li><a href="/products_list" ><i className="fa fa-instructors"></i>Products List</a></li>
-                    <li><a href="/product" ><i className="fa fa-instructors"></i>Product</a></li>
+                    <li><a href="/shopmanager.com">Home</a></li>
+                    <li><a href="/products_list" >Products List</a></li>
+                    <li><a href="/product" >Product</a></li>
 
                     {/*
                       <li><a ><i className="fa fa-category"></i>Курсы</a>
