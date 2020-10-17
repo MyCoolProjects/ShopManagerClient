@@ -69,23 +69,6 @@ export default class ProductCard extends Component {
                 <Button variant="danger" id="addcart" ><span><img src={sopping_cart} style={{width: "20%"}}/> <b>В корзину</b></span></Button>
               </Col>
             </Row>
-
-            {/* //лишняя для карточки инфа
-              <Row>
-                <Col>
-                  <ul >
-                    <li>{product.description1}</li>
-                    <li>{product.description2}</li>
-                    <li>{product.description3}</li>
-                    <li>{product.description4}</li>
-                    <li>{product.description5}</li>
-                    <li>{product.description6}</li>
-                    <li>{product.description7}</li>
-                    <li>{product.description8}</li>
-                  </ul>
-                </Col>
-              </Row>
-            */}
           </Col>
         </Row>
 
