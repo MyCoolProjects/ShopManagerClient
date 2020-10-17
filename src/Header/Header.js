@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Header.css';
-import icon_search from './search-64.png'
+import icon_search from './search.png'
 export default class Header extends Component {
   render() {
     return (
@@ -17,7 +17,7 @@ export default class Header extends Component {
               <Nav.Link><Link className="link" to="/">Home</Link></Nav.Link>
               <Nav.Link><Link className="link" to="/products_list">Products List</Link></Nav.Link>
               <Nav.Link><Link className="link" to="/product">Product</Link></Nav.Link>
-              <Nav.Link><Link className="link" to="/product">?????</Link></Nav.Link>
+              <Nav.Link><Link className="link" to="/product/4">?????</Link></Nav.Link>
 
             </Nav>
 

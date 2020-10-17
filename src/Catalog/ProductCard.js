@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Row, Col, Card, Button} from 'react-bootstrap';
-import './Product_Card.css'
-import sopping_cart from './shopping-cart-32.png'
-export default class Product_Card extends Component {
+import './ProductCard.css'
+import sopping_cart from './shoppingCart.png'
+export default class ProductCard extends Component {
 
   render() {
     const Star = ({ marked, starId }) => (
@@ -44,7 +44,7 @@ export default class Product_Card extends Component {
               </Col>
             </Row>
 
-            <Row className="Card-title">
+            <Row className="Card-title pl-4 pr-4">
               <Col >
                 <div>{product.title}</div>
               </Col>

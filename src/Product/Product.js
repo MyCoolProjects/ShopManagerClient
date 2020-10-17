@@ -3,7 +3,10 @@ import { Row, Col, Container, Carousel } from 'react-bootstrap';
 
 export default class Product extends Component {
 
-  // didmount
+
+
+
+
   render() {
 
 
@@ -13,59 +16,24 @@ export default class Product extends Component {
     return (
       <>
         <Container fluid>
-          <Row>
-            <Col>
-              <div>TITLE name of product</div>
-            </Col>
-          </Row>
 
-          <Row>
-            <Col sm={4}>
-              <Carousel>
+          <div>{this.props.id} {this.props.sku}</div>
+          <div>{this.props.title}</div>
+          <hr/>
+          <div>{this.props.description1}</div>
+          <div>{this.props.description2}</div>
+          <div>{this.props.description3}</div>
+          <div>{this.props.description4}</div>
+          <div>{this.props.description5}</div>
+          <div>{this.props.description6}</div>
+          <div>{this.props.description7}</div>
+          <div>{this.props.description8}</div>
+          <hr/>
+          <div>{this.props.reating}</div>
+          <div>{this.props.price}</div>
+          <hr/>
+          <div>{this.props.availableSizes.join(', ')}</div>
 
-                <Carousel.Item>
-                  <img src="https://img.mvideo.ru/Pdb/30053163b2.jpg" alt="carousel_img2" />
-                </Carousel.Item>
-
-                <Carousel.Item>
-                  <img src="https://img.mvideo.ru/Pdb/30053163b3.jpg" alt="carousel_img3" />
-                </Carousel.Item>
-
-                <Carousel.Item>
-                  <img src="https://img.mvideo.ru/Pdb/30053163b4.jpg" alt="carousel_img4" />
-                </Carousel.Item>
-
-                <Carousel.Item>
-                  <img src="https://img.mvideo.ru/Pdb/30053163b5.jpg" alt="carousel_img5" />
-                </Carousel.Item>
-
-                <Carousel.Item>
-                  <img src="https://img.mvideo.ru/Pdb/30053163b6.jpg" alt="carousel_img6" />
-                </Carousel.Item>
-              </Carousel>
-            </Col>
-
-            <Col sm={4}>
-              <Row>
-                <Col>
-                  <div><b>Встроенная память (ROM)</b></div>
-                  <div>____</div>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <div><b>Цвет</b></div>
-                  <div>____</div>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <div><b>Характеристики</b></div>
-                  <div>____</div>
-                </Col>
-              </Row>
-            </Col>
-          </Row>
 
 
         </Container>

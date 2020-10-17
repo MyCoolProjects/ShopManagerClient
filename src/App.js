@@ -4,8 +4,8 @@ import './App.css';
 import Header from './Header/Header.js';
 //import Footer from './Footer/Footer.js';
 import Home from './Home/Home.js';
-import Products_List from './Products_List/Products_List.js';
-import Product from './Product/Product.js';
+import ProductsList from './Catalog/ProductsList.js';
+import ProductFetch from './Product/ProductFetch.js';
 
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
@@ -18,9 +18,9 @@ function App() {
       <Header></Header>
       <Switch>
         <Route exact path="/" component={Home}/>
-        <Route path="/shopmanager.com" component={Home}/>
-        <Route path="/products_list" component={Products_List}/>
-        <Route path="/product" component={Product}/>
+        {/* <Route path="/shop" component={Home}/> */}
+        <Route path="/products_list" component={ProductsList}/>
+        <Route path="/product" component={ProductFetch}/>
         {/*
         <Route component={Error}/>
         */}

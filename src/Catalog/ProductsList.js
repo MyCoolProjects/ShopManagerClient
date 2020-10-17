@@ -1,17 +1,17 @@
 import React, { Component } from "react"
 import { Container, Row, Col, CardColumns, Form } from "react-bootstrap"
 // const Product_Card = lazy(() => import('./Product_Card.js'))
-import Product_Card from "./Product_Card.js"
-import './Product_Card.css'
+import ProductCard from "./ProductCard.js"
+import './ProductCard.css'
 
-class Products_List extends Component {
+class ProductsList extends Component {
   constructor() {
     super();
     this.state = {
       products: []
     };
   }
-  componentWillMount() {
+  componentDidMount() {
     fetch("http://localhost:3000/products_list")
       .then(res => res.json())
       .catch(err =>
@@ -94,7 +94,7 @@ class Products_List extends Component {
               <Row>
                 <Col>
                   <CardColumns className="space-behind-product-card">
-                    <Product_Card products={this.state.products} />
+                    <ProductCard products={this.state.products} />
                   </CardColumns>
                 </Col>
               </Row>
@@ -107,4 +107,4 @@ class Products_List extends Component {
   }
 }
 
-export default Products_List;
+export default ProductsList;
