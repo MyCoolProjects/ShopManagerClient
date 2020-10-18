@@ -15,15 +15,13 @@ function App() {
 
 
     <BrowserRouter>
-      <Header></Header>
+      <Header></Header> 
+      <div style={{height:"64px"}}></div>
       <Switch>
         <Route exact path="/" component={Home}/>
         {/* <Route path="/shop" component={Home}/> */}
         <Route path="/products_list" component={ProductsList}/>
-        <Route path="/product" component={ProductFetch}/>
-        {/*
-        <Route component={Error}/>
-        */}
+        <Route path="/product/:id" component={ProductFetch}/>
       </Switch>
       {/* <Footer></Footer> */}
 

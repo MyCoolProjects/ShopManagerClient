@@ -10,23 +10,32 @@ class ProductFetch extends Component {
             isLoaded: false,
             id: "",
             name: "",
-            description: "",  
-            price: ""  
+            price: "",
+            description: "",
+            product_category: "",
+            specifNames: []
+
         };
     }
     componentDidMount() {
-        fetch("Main.json")
+        const id = this.props.match.params.id;
+        // fetch(`/api/product/${id}`)
+        //     .then(res => res.json())
+        //     .catch(err => {
+        fetch("/Main.json")
             .then(res => res.json())
-            .then(
-                (result) => {
-                    this.setState({
-                        isLoaded: true,
-                        id: result.products[0].id,
-                        name: result.products[0].name,
-                        description: result.products[0].description,
-                        price: result.products[0].price
-                    });
-                },
+            .then((result) => {
+                const currProduct = result.products.find((p) => p.id == id);
+                this.setState({
+                    isLoaded: true,
+                    id: currProduct.id,
+                    name: currProduct.name,
+                    price: currProduct.price,
+                    description: currProduct.description,
+                    product_category: currProduct.product_category,
+                    specifNames: currProduct.specifications
+                });
+            },
                 (error) => {
                     this.setState({
                         isLoaded: true,
@@ -34,11 +43,24 @@ class ProductFetch extends Component {
                     })
                 }
             )
-
+        //}
+        // )
+        // .then((result) => {
+        //     const currProduct = result.products.find((p) => p.id == id);
+        //     this.setState({
+        //         isLoaded: true,
+        //         id: currProduct.id,
+        //         name: currProduct.name,
+        //         price: currProduct.price,
+        //         description: currProduct.description,
+        //         product_category: currProduct.product_category,
+        //         specifNames: currProduct.specifications
+        //     });
+        // });
     };
 
     render() {
-        const { error, isLoaded, id, name, description, price} = this.state;
+        const { error, isLoaded, id, name, price, description, product_category, specifNames } = this.state;
         if (error) {
             return (
                 <div>Error {error.message}</div>
@@ -52,15 +74,15 @@ class ProductFetch extends Component {
         else {
             return (
                 <Product
-                    id            =  {id} 
-                    name           =  {name} 
-                    description  =  {description} 
-                    price         =  {price}
+                    id={id}
+                    name={name}
+                    price={price}
+                    description={description}
+                    product_category={product_category.name}
+                    specifNames={specifNames}
                 />
             )
         }
-
-
     }
 }
 

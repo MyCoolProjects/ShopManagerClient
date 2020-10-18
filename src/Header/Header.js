@@ -8,17 +8,15 @@ export default class Header extends Component {
     return (
       <>
 
-        <Navbar className="header" collapseOnSelect expand="md">
-          <Navbar.Brand>Web LOGO</Navbar.Brand>
+        <Navbar className="header" fixed="top" collapseOnSelect expand="md">
+          <Navbar.Brand>West Coast</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse className="m-auto" id="responsive-navbar-nav">
 
             <Nav className="menu mr-auto">
-              <Nav.Link><Link className="link" to="/">Home</Link></Nav.Link>
-              <Nav.Link><Link className="link" to="/products_list">Products List</Link></Nav.Link>
-              <Nav.Link><Link className="link" to="/product">Product</Link></Nav.Link>
-              <Nav.Link><Link className="link" to="/product/4">?????</Link></Nav.Link>
-
+              <Nav.Link><Link className="link" to="/">Домой</Link></Nav.Link>
+              <Nav.Link><Link className="link" to="/products_list">Каталог</Link></Nav.Link>
+              {/* <Nav.Link><Link className="link" to="/product/3">Product/3</Link></Nav.Link> */}
             </Nav>
 
             <Form inline className="ml-auto mr-5" style={{ textAlign: "right" }}>
