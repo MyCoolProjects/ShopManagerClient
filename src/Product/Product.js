@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Row, Col, Container, Carousel } from 'react-bootstrap';
+import { Row, Col, Container } from 'react-bootstrap';
 
 export default class Product extends Component {
 

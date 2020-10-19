@@ -37,7 +37,7 @@ export default class ProductCard extends Component {
 
       <Card bg="white" key={product.id} >
         <Link to={`/product/${product.id}`}>
-          <Card.Img variant="top" src="https://kg-portal.ru/img/79364/main.jpg"></Card.Img> {/*src={`products_img/${product.sku}.jpg`} */}
+          <Card.Img variant="top" src="https://kg-portal.ru/img/79364/main.jpg" alt="RobertPattison"></Card.Img> {/*src={`products_img/${product.sku}.jpg`} */}
         </Link>
         <Card.Body>
           <Link to={`/product/${product.id}`}>
@@ -47,7 +47,7 @@ export default class ProductCard extends Component {
             {/* <div><StarRating rating={product.reating} /></div> */}
             <b>{product.price} ₽</b>
           </Card.Text>
-          <Button variant="danger" id="addcart" ><span><img src={sopping_cart} style={{ width: "20%" }} /> <b>В корзину</b></span></Button>
+          <Button variant="danger" id="addcart" ><span><img src={sopping_cart} alt="sopping_cart" style={{ width: "20%" }} /> <b>В корзину</b></span></Button>
         </Card.Body>
       </Card >
     ));
