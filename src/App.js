@@ -2,7 +2,7 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import Header from './Header/Header.js';
-//import Footer from './Footer/Footer.js';
+import Footer from './Footer/Footer.js';
 import Home from './Home/Home.js';
 import ProductsList from './Catalog/ProductsList.js';
 import ProductFetch from './Product/ProductFetch.js';
@@ -19,7 +19,7 @@ function App() {
         <Route path="/catalog" component={ProductsList}/>
         <Route path="/product/:id" component={ProductFetch}/>
       </Switch>
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
       {/* exact нужен для того, чтобы загружалась при пасе в один корень P.S. Загружает при npm start*/}
     </BrowserRouter>
   );

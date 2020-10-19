@@ -46,7 +46,7 @@ class ProductsList extends Component {
     }
     else if (!isLoaded) {
       return (
-        <div>Loading...</div>
+        <Container fluid className="pt-5 mt-5" style={{textAlign:"center", fontSize: 40}}>Loading...</Container>
       )
     }
     else {

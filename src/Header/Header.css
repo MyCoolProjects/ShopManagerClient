@@ -2,7 +2,7 @@
     background-color: rgb(25, 25, 25);
     margin: 0;
     height: 100;
-    border-bottom: 5px solid #5A6268;
+    border-bottom: 5px solid #808080;
 }
 .menu{
     /* border-right: 1px solid rgb(190, 30, 30); */
@@ -17,8 +17,8 @@
     border-right: 1px solid #DBDBDB;
 }
 .link:hover {
-    color:#bbbbbb;
+    color:#a1a1a1;
     text-decoration: none;
     transition: all 0.1s ease-out;
-    border-right: 1px solid #bbbbbb
+    border-right: 1px solid #a1a1a1
 }

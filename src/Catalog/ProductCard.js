@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './ProductCard.css'
-import sopping_cart from './shoppingCart.png'
+import sopping_cart from '../westCoastImg/shoppingCart.png'
 export default class ProductCard extends Component {
 
   render() {
@@ -35,19 +35,21 @@ export default class ProductCard extends Component {
     // Описани карточки товара
     const productItems = this.props.products.map(product => (
 
-      <Card bg="white" key={product.id} >
+      <Card bg="white" border="secondary" key={product.id} >
         <Link to={`/product/${product.id}`}>
           <Card.Img variant="top" src="https://kg-portal.ru/img/79364/main.jpg" alt="RobertPattison"></Card.Img> {/*src={`products_img/${product.sku}.jpg`} */}
         </Link>
         <Card.Body>
-          <Link to={`/product/${product.id}`}>
-            <Card.Title>{product.name}</Card.Title>
+          <Link className="Card-Name p-0 m-0" to={`/product/${product.id}`}>
+            <Card.Title style={{fontSize:"26px"}}>{product.name}</Card.Title>
           </Link>
-          <Card.Text>
+          <Card.Text className="Card-Price pt-2" style={{fontSize:"20px"}}>
             {/* <div><StarRating rating={product.reating} /></div> */}
             <b>{product.price} ₽</b>
           </Card.Text>
-          <Button variant="danger" id="addcart" ><span><img src={sopping_cart} alt="sopping_cart" style={{ width: "20%" }} /> <b>В корзину</b></span></Button>
+          <div  className="pt-2 m-0" style={{textAlign:"center"}}>
+            <Button variant="secondary" id="addcart" ><img src={sopping_cart} alt="sopping_cart" style={{ width: "20%" }} /><b> В корзину</b></Button>
+          </div>
         </Card.Body>
       </Card >
     ));
