@@ -18,9 +18,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && npm run rename-index",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "rename-index": "node -e \"require('fs').rename('build/index.html','build/app.html' , (err) => { (err? console.log(err) : console.log('Rename complete!') ) } )\""
   },
   "eslintConfig": {
     "extends": "react-app"

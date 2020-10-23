@@ -19,10 +19,12 @@ class ProductFetch extends Component {
     }
     componentDidMount() {
         const id = this.props.match.params.id;
-        // fetch(`/api/product/${id}`)
-        //     .then(res => res.json())
-        //     .catch(err => {
-        fetch("/Main.json")
+        fetch(`/api/product/${id}`)
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error("Not 2xx response");
+                }
+            })
             .then(res => res.json())
             .then((result) => {
                 const currProduct = result.products.find((p) => p.id == id);
@@ -35,28 +37,31 @@ class ProductFetch extends Component {
                     product_category: currProduct.product_category,
                     specifNames: currProduct.specifications
                 });
-            },
-                (error) => {
-                    this.setState({
-                        isLoaded: true,
-                        error
-                    })
-                }
-            )
-        //}
-        // )
-        // .then((result) => {
-        //     const currProduct = result.products.find((p) => p.id == id);
-        //     this.setState({
-        //         isLoaded: true,
-        //         id: currProduct.id,
-        //         name: currProduct.name,
-        //         price: currProduct.price,
-        //         description: currProduct.description,
-        //         product_category: currProduct.product_category,
-        //         specifNames: currProduct.specifications
-        //     });
-        // });
+            })
+            .catch(err => {
+                console.log(err)
+                fetch("/Main.json")
+                    .then(res => res.json())
+                    .then((result) => {
+                        const currProduct = result.products.find((p) => p.id == id);
+                        this.setState({
+                            isLoaded: true,
+                            id: currProduct.id,
+                            name: currProduct.name,
+                            price: currProduct.price,
+                            description: currProduct.description,
+                            product_category: currProduct.product_category,
+                            specifNames: currProduct.specifications
+                        });
+                    },
+                        (error) => {
+                            this.setState({
+                                isLoaded: true,
+                                error
+                            })
+                        }
+                    )
+            });
     };
 
     render() {
