@@ -27,7 +27,7 @@ class ProductFetch extends Component {
             })
             .then(res => res.json())
             .then((result) => {
-                const currProduct = result.products.find((p) => p.id == id);
+                const currProduct = result.products.find((p) => p.id === id);
                 this.setState({
                     isLoaded: true,
                     id: currProduct.id,
@@ -43,7 +43,7 @@ class ProductFetch extends Component {
                 fetch("/Main.json")
                     .then(res => res.json())
                     .then((result) => {
-                        const currProduct = result.products.find((p) => p.id == id);
+                        const currProduct = result.products.find((p) => p.id === id);
                         this.setState({
                             isLoaded: true,
                             id: currProduct.id,

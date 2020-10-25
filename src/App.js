@@ -14,10 +14,9 @@ function App() {
       <Header></Header> 
       {/* пропуск места из-за фиксированного header */}<div style={{height:"104px"}}></div>
       <Switch>
-        <Route exact path="/" component={Home}/>
-        {/* <Route path="/shop" component={Home}/> */}
         <Route path="/catalog" component={ProductsList}/>
         <Route path="/product/:id" component={ProductFetch}/>
+        <Route exact path="*" component={Home}/>
       </Switch>
       <Footer></Footer>
       {/* exact нужен для того, чтобы загружалась при пасе в один корень P.S. Загружает при npm start*/}
