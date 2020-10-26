@@ -40,53 +40,38 @@ export default class Product extends Component {
                   <div>Код товара: {this.props.id}</div>
                 </Col>
               </Row>
-              <hr color="red"/>
+              <hr color="red" />
               <Row>
                 <Col sm={4}>
-                  <Carousel className="carousel mt-3 mb-5" style={{height:"600px"}}>
-                    <Carousel.Item className="carousel-item" style={{height:"600px"}}>
+                  <Carousel className="carousel mt-3 mb-5" style={{ height: "600px" }}>
+                    <Carousel.Item className="product-carousel-item" style={{ height: "600px" }}>
                       <Image
                         fluid
                         className="d-block"
-                        style={{ position: "relative", objectFit: "cover", height:"600px" }}
+                        style={{ position: "relative", objectFit: "cover", height: "600px" }}
                         src="https://avatars.mds.yandex.net/get-kinopoisk-post-img/1539913/4ad5d465e580f7d230a427ce2d6a09b6/960x540"
                         alt="First slide"
                       />
-
-                      {/* <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                      </Carousel.Caption> */}
                     </Carousel.Item>
 
-                    <Carousel.Item className="carousel-item" style={{height:"600px"}}>
+                    <Carousel.Item className="product-carousel-item" style={{ height: "600px" }}>
                       <Image
                         fluid
                         className="d-block"
-                        style={{ position: "center", objectFit: "cover", height:"600px" }}
+                        style={{ position: "center", objectFit: "cover", height: "600px" }}
                         src="https://avatars.mds.yandex.net/get-kinopoisk-post-img/2268018/9fec1b2a754b40fa78f1fcab9c18fb9d/960x540"
                         alt="Second slide"
                       />
-
-                      {/* <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                      </Carousel.Caption> */}
                     </Carousel.Item>
 
-                    <Carousel.Item className="carousel-item" style={{height:"600px"}}>
+                    <Carousel.Item className="product-carousel-item" style={{ height: "600px" }}>
                       <Image
                         fluid
                         className="d-block "
-                        style={{ position: "center", objectFit: "cover", height:"600px" }}
+                        style={{ position: "center", objectFit: "cover", height: "600px" }}
                         src="https://total.kz/storage/a3/a34de8b05cd4567a7e3d91d3f834c50c_resize_w_830_h_465.jpg"
                         alt="Third slide"
                       />
-
-                      {/* <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                      </Carousel.Caption> */}
                     </Carousel.Item>
                   </Carousel>
                 </Col>
@@ -100,15 +85,16 @@ export default class Product extends Component {
                   <Row className="pl-3 pb-5"><b>Цена:</b></Row>
                   <Row className="pb-5">
                     <Col sm style={{ textAlign: "left" }}>
-                      <Button variant="secondary" id="addcart" ><img src={sopping_cart} alt="sopping_cart" style={{ width: "20%" }} /><b> В корзину</b></Button>
-                    </Col>
-                    <Col sm style={{ textAlign: "right" }}>
                       <b>{this.props.price} ₽</b>
                       <hr className="mt-1 p-0 m-0" />
+                    </Col>
+                    <Col sm style={{ textAlign: "right" }}>
+                      <Button variant="secondary" id="addcart" ><img src={sopping_cart} alt="sopping_cart" style={{ width: "20%" }} /><b> В корзину</b></Button>
                     </Col>
                   </Row>
                 </Col>
               </Row>
+              <hr color="red" />
             </Col>
             <Col sm={1}></Col>
           </Row>

@@ -62,7 +62,7 @@ export default class Header extends Component {
                             </Col>
                         </Row>
                         <hr className="footer-delimiters" color="white" />
-                        <Row className="pt-2 pb-5">
+                        <Row className="pt-2 pb-4">
                             <Col>
                                 <div className="footer-text-disable">© «West Coast», 2020</div>
                             </Col>
