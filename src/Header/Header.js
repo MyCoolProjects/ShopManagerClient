@@ -13,7 +13,7 @@ export default class Header extends Component {
           <Navbar.Brand href="/">
             <img src={westCoastLogo} alt="WestCoastLogo" width="140px" className="p-0 m-0 ml-2"/>
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" variant="light" />
           <Navbar.Collapse className="m-auto" id="responsive-navbar-nav">
 
             <Nav className="menu mr-auto">

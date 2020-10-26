@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Container, Button, Spinner } from 'react-bootstrap';
+
 import Product from './Product.js'
 
 
@@ -73,7 +75,18 @@ class ProductFetch extends Component {
         }
         else if (!isLoaded) {
             return (
-                <div>Loading...</div>
+                <Container fluid className="pt-5 mt-5" style={{ textAlign: "center", verticalAlign: "middle", height:"757px", fontSize: 40 }}>
+                    <Button variant="dark" disabled>
+                        <Spinner
+                            as="span"
+                            animation="border"
+                            size="md"
+                            role="status"
+                            aria-hidden="true"
+                        />
+                        {" "} Loading...
+                    </Button>
+                </Container>
             )
         }
         else {

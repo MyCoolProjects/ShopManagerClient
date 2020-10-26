@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Container, Row, Col, CardColumns, Form } from "react-bootstrap"
+import { Container, Row, Col, CardColumns, Form, Button, Spinner } from "react-bootstrap"
 // const Product_Card = lazy(() => import('./Product_Card.js'))
 import ProductCard from "./ProductCard.js"
 import './ProductCard.css'
@@ -46,7 +46,18 @@ class ProductsList extends Component {
     }
     else if (!isLoaded) {
       return (
-        <Container fluid className="pt-5 mt-5" style={{textAlign:"center", fontSize: 40}}>Loading...</Container>
+        <Container fluid className="mb-5 mt-5" style={{ textAlign: "center", verticalAlign: "middle" , height:"757px", fontSize: 40 }}>
+            <Button variant="dark" disabled>
+              <Spinner
+                as="span"
+                animation="border"
+                size=""
+                role="status"
+                aria-hidden="true"
+              />
+              {" "} Loading...
+            </Button>
+        </Container>
       )
     }
     else {
