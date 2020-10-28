@@ -37,7 +37,7 @@ export default class ProductCard extends Component {
 
       <Card bg="white" border="secondary" key={product.id} >
         <Link to={`/product/${product.id}`}>
-          <Card.Img variant="top" src="https://kg-portal.ru/img/79364/main.jpg" alt="RobertPattison"></Card.Img> {/*src={`products_img/${product.sku}.jpg`} */}
+          <Card.Img variant="top" src={`/image/${product.images[0].id}`} alt="RobertPattison"></Card.Img> {/*src={`products_img/${product.sku}.jpg`} */}
         </Link>
         <Card.Body>
           <Link className="Card-Name p-0 m-0" to={`/product/${product.id}`}>

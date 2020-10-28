@@ -4,16 +4,16 @@ import sopping_cart from '../westCoastImg/shoppingCart.png'
 import './Product.css'
 export default class Product extends Component {
   render() {
-    const specificationsArray = this.props.specifNames.map(specifName => (
+    const specificationsArray = this.props.currProduct.specifications.map(spec => (
       <>
 
-        <Container fluid key={specifName.id}>
+        <Container fluid key={spec.id}>
           <Row className="pt-2 pb-1">
             <Col sm style={{ textAlign: "left" }}>
-              <b>{specifName.name}:</b>
+              <b>{spec.name}:</b>
             </Col>
             <Col sm style={{ textAlign: "right" }}>
-              {specifName.value}
+              {spec.value}
             </Col>
           </Row>
           <hr className="p-0 m-0" />
@@ -23,13 +23,13 @@ export default class Product extends Component {
     ))
     return (
       <>
-        <Container fluid style={{ fontSize: 20 }} key={this.props.id} expand="md">
+        <Container fluid style={{ fontSize: 20 }} key={this.props.currProduct.id} expand="md">
           <Row className="mt-5">
             <Col sm={1}></Col>
             <Col sm={10}>
               <Row>
                 <Col className="pl-5" >
-                  {this.props.name}
+                  {this.props.currProduct.name}
                 </Col>
               </Row>
               <Row>
@@ -37,42 +37,24 @@ export default class Product extends Component {
                   <div><b>Тут будет рейтинг</b></div>
                 </Col>
                 <Col className="pr-5" style={{ textAlign: "right" }}>
-                  <div>Код товара: {this.props.id}</div>
+                  <div>Код товара: {this.props.currProduct.id}</div>
                 </Col>
               </Row>
               <hr color="red" />
               <Row>
                 <Col sm={4}>
                   <Carousel className="carousel mt-3 mb-5" style={{ height: "600px" }}>
-                    <Carousel.Item className="product-carousel-item" style={{ height: "600px" }}>
+                    {this.props.currProduct.images.map(image => 
+                      <Carousel.Item key={image.id} className="product-carousel-item" style={{ height: "600px" }}>
                       <Image
                         fluid
                         className="d-block"
                         style={{ position: "relative", objectFit: "cover", height: "600px" }}
-                        src="https://avatars.mds.yandex.net/get-kinopoisk-post-img/1539913/4ad5d465e580f7d230a427ce2d6a09b6/960x540"
+                        src={`/image/${image.id}`}
                         alt="First slide"
                       />
                     </Carousel.Item>
-
-                    <Carousel.Item className="product-carousel-item" style={{ height: "600px" }}>
-                      <Image
-                        fluid
-                        className="d-block"
-                        style={{ position: "center", objectFit: "cover", height: "600px" }}
-                        src="https://avatars.mds.yandex.net/get-kinopoisk-post-img/2268018/9fec1b2a754b40fa78f1fcab9c18fb9d/960x540"
-                        alt="Second slide"
-                      />
-                    </Carousel.Item>
-
-                    <Carousel.Item className="product-carousel-item" style={{ height: "600px" }}>
-                      <Image
-                        fluid
-                        className="d-block "
-                        style={{ position: "center", objectFit: "cover", height: "600px" }}
-                        src="https://total.kz/storage/a3/a34de8b05cd4567a7e3d91d3f834c50c_resize_w_830_h_465.jpg"
-                        alt="Third slide"
-                      />
-                    </Carousel.Item>
+                    )}
                   </Carousel>
                 </Col>
 
@@ -85,7 +67,7 @@ export default class Product extends Component {
                   <Row className="pl-3 pb-5"><b>Цена:</b></Row>
                   <Row className="pb-5">
                     <Col sm style={{ textAlign: "left" }}>
-                      <b>{this.props.price} ₽</b>
+                      <b>{this.props.currProduct.price} ₽</b>
                       <hr className="mt-1 p-0 m-0" />
                     </Col>
                     <Col sm style={{ textAlign: "right" }}>

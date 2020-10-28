@@ -15,22 +15,41 @@ class ProductsList extends Component {
     };
   }
   componentDidMount() {
-    fetch("/Main.json")
+    fetch("/api/product")
+      .then(res => {
+        if (!res.ok) throw new Error("Not 2xx response");
+        return res;
+      })
       .then(res => res.json())
-      .then(
-        (result) => {
-          this.setState({
-            isLoaded: true,
-            products: result.products
-          });
-        },
-        (error) => {
-          this.setState({
-            isLoaded: true,
-            error
-          })
-        }
-      )
+      .then((result) => {
+        if (!result) throw new Error("Empty response");
+        this.setState({
+          isLoaded: true,
+          products: result.products
+        });
+      })
+      .catch((error) => {
+        this.setState({
+          isLoaded: true,
+          error
+        })
+      })
+    // fetch("/Main.json")
+    //   .then(res => res.json())
+    //   .then(
+    //     (result) => {
+    //       this.setState({
+    //         isLoaded: true,
+    //         products: result.products
+    //       });
+    //     },
+    //     (error) => {
+    //       this.setState({
+    //         isLoaded: true,
+    //         error
+    //       })
+    //     }
+    //   )
 
   };
 
@@ -46,16 +65,16 @@ class ProductsList extends Component {
     }
     else if (!isLoaded) {
       return (
-        <Container fluid className="mb-5 mt-5" style={{ textAlign: "center", verticalAlign: "middle" , height:"757px", fontSize: 40 }}>
-            <Button variant="dark" disabled>
-              <Spinner
-                as="span"
-                animation="border"
-                size=""
-                role="status"
-                aria-hidden="true"
-              />
-              {" "} Loading...
+        <Container fluid className="mb-5 mt-5" style={{ textAlign: "center", verticalAlign: "middle", height: "757px", fontSize: 40 }}>
+          <Button variant="dark" disabled>
+            <Spinner
+              as="span"
+              animation="border"
+              size=""
+              role="status"
+              aria-hidden="true"
+            />
+            {" "} Loading...
             </Button>
         </Container>
       )
@@ -113,11 +132,11 @@ class ProductsList extends Component {
               <Col sm={8} style={{ textAlign: "end" }}>
                 <Row>
                   <Col className="filter-2">
-                    <select className="select-css">
-                      <option>Сначала дешевле</option>
-                      <option selected >Сначала дороже</option>
-                      <option>Сначала с высоким рейтингом</option>
-                      <option>Сначала со скидкой</option>
+                    <select defaultValue="1" className="select-css">
+                      <option value="0">Сначала дешевле</option>
+                      <option value="1" >Сначала дороже</option>
+                      <option value="2">Сначала с высоким рейтингом</option>
+                      <option value="3">Сначала со скидкой</option>
                     </select>
                     <hr />
                   </Col>
