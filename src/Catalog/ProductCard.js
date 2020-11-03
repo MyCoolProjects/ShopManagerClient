@@ -37,17 +37,17 @@ export default class ProductCard extends Component {
 
       <Card bg="white" border="secondary" key={product.id} >
         <Link to={`/product/${product.id}`}>
-          <Card.Img variant="top" src={`/image/${product.images[0].id}`} alt="RobertPattison"></Card.Img> {/*src={`products_img/${product.sku}.jpg`} */}
+          {product.images.length > 0 && <Card.Img variant="top" src={`/image/${product.images[0]?.id}`} alt="RobertPattison"></Card.Img>}
         </Link>
         <Card.Body>
           <Link className="Card-Name p-0 m-0" to={`/product/${product.id}`}>
-            <Card.Title style={{fontSize:"26px"}}>{product.name}</Card.Title>
+            <Card.Title style={{ fontSize: "26px" }}>{product.name}</Card.Title>
           </Link>
-          <Card.Text className="Card-Price pt-2" style={{fontSize:"20px"}}>
+          <Card.Text className="Card-Price pt-2" style={{ fontSize: "20px" }}>
             {/* <div><StarRating rating={product.reating} /></div> */}
             <b>{product.price} ₽</b>
           </Card.Text>
-          <div  className="pt-2 m-0" style={{textAlign:"center"}}>
+          <div className="pt-2 m-0" style={{ textAlign: "center" }}>
             <Button variant="secondary" id="addcart" ><img src={sopping_cart} alt="sopping_cart" style={{ width: "20%" }} /><b> В корзину</b></Button>
           </div>
         </Card.Body>
