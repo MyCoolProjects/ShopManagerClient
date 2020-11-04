@@ -22,10 +22,10 @@ export default class Header extends Component {
               {/* <Nav.Link><Link className="link" to="/product/3">Product/3</Link></Nav.Link> */}
             </Nav>
 
-            <Form inline className="ml-auto mr-5" style={{ textAlign: "right" }}>
+            <Form inline className="ml-auto mr-5" style={{ textAlign: 'right' }}>
               <FormControl type="text" placeholder="Search" className=" mr-sm-2" />
               <Button variant="secondary">
-                <span><img src={icon_search} alt="icon_search" style={{ width: "20%" }} /></span> Поиск<span></span>
+                <span><img src={icon_search} alt="icon_search" style={{ width: '20%' }} /></span> Поиск<span></span>
               </Button>
             </Form>
 

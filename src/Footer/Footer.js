@@ -3,10 +3,10 @@ import { Container, Row, Col, Image, Nav, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import westCoast1 from '../westCoastImg/WestCoastShortText.jpg';
 import westCoast2 from '../westCoastImg/WestCoastLogo.jpg';
-import instagram from "../westCoastImg/instagram.png"
-import vk from "../westCoastImg/vk.png"
-import twitter from "../westCoastImg/twitter.png"
-import facebook from "../westCoastImg/facebook.png"
+import instagram from '../westCoastImg/instagram.png'
+import vk from '../westCoastImg/vk.png'
+import twitter from '../westCoastImg/twitter.png'
+import facebook from '../westCoastImg/facebook.png'
 import './Footer.css';
 export default class Header extends Component {
     render() {
@@ -28,7 +28,7 @@ export default class Header extends Component {
                                     <Link className="footer-link mt-2" to="/catalog">Каталог</Link>
                                 </Nav>
                             </Col>
-                            <Col sm style={{ textAlignLast: "end" }}>
+                            <Col sm style={{ textAlignLast: 'end' }}>
                                 <div className="footer-text-disable-title"><b>Контакты</b></div>
                                 <div className="footer-text-disable">г. Москва, Проспект Вернадского, д. 78</div>
                                 <div className="footer-text-disable mt-2 mb-2">+7-495-666-69-69</div>

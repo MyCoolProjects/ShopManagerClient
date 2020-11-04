@@ -1,4 +1,5 @@
 module.exports = {
+    "ignorePatterns": [".eslintrc.js"],
     "settings": {
         "react": {
             "version": "detect"
@@ -266,7 +267,7 @@ module.exports = {
         "prefer-spread": "error",
         "prefer-template": "error",
         "quote-props": "off",
-        "quotes": "off",
+        "quotes": ["error", "single", { "avoidEscape": true }],
         "radix": "error",
         "react/prop-types": "off",
         "require-atomic-updates": "error",

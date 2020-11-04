@@ -1,7 +1,7 @@
-import React, { Component } from "react"
-import { Container, Row, Col, CardColumns, Form, Button, Spinner } from "react-bootstrap"
+import React, { Component } from 'react'
+import { Container, Row, Col, CardColumns, Form, Button, Spinner } from 'react-bootstrap'
 // const Product_Card = lazy(() => import('./Product_Card.js'))
-import ProductCard from "./ProductCard.js"
+import ProductCard from './ProductCard.js'
 import './ProductCard.css'
 
 class ProductsList extends Component {
@@ -15,14 +15,14 @@ class ProductsList extends Component {
     };
   }
   componentDidMount() {
-    fetch("/api/product")
+    fetch('/api/product')
       .then(res => {
-        if (!res.ok) throw new Error("Not 2xx response");
+        if (!res.ok) throw new Error('Not 2xx response');
         return res;
       })
       .then(res => res.json())
       .then((result) => {
-        if (!result) throw new Error("Empty response");
+        if (!result) throw new Error('Empty response');
         this.setState({
           isLoaded: true,
           products: result.products
@@ -65,7 +65,7 @@ class ProductsList extends Component {
     }
     else if (!isLoaded) {
       return (
-        <Container fluid className="mb-5 mt-5" style={{ textAlign: "center", verticalAlign: "middle", height: "757px", fontSize: 40 }}>
+        <Container fluid className="mb-5 mt-5" style={{ textAlign: 'center', verticalAlign: 'middle', height: '757px', fontSize: 40 }}>
           <Button variant="dark" disabled>
             <Spinner
               as="span"
@@ -74,7 +74,7 @@ class ProductsList extends Component {
               role="status"
               aria-hidden="true"
             />
-            {" "} Loading...
+            {' '} Loading...
             </Button>
         </Container>
       )
@@ -129,7 +129,7 @@ class ProductsList extends Component {
 
 
               {/* катекогрии фильтры и прочее */}
-              <Col sm={8} style={{ textAlign: "end" }}>
+              <Col sm={8} style={{ textAlign: 'end' }}>
                 <Row>
                   <Col className="filter-2">
                     <select defaultValue="1" className="select-css">
