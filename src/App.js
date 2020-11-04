@@ -11,12 +11,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <BrowserRouter>
-      <Header></Header> 
-      {/* пропуск места из-за фиксированного header */}<div style={{height:"104px"}}></div>
+      <Header></Header>
+      {/* пропуск места из-за фиксированного header */}<div style={{ height: "104px" }}></div>
       <Switch>
-        <Route path="/catalog" component={ProductsList}/>
-        <Route path="/product/:id" component={ProductFetch}/>
-        <Route path="/" component={Home}/>
+        <Route path="/catalog" component={ProductsList} />
+        <Route path="/product/:id" component={ProductFetch} />
+        <Route path="/" component={Home} />
       </Switch>
       <Footer></Footer>
       {/* exact нужен для того, чтобы загружалась при пасе в один корень P.S. Загружает при npm start*/}

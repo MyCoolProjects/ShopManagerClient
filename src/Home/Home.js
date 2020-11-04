@@ -34,7 +34,7 @@ export default class Home extends Component {
               />
               <Carousel.Caption className="home-list-carousel">
                 <h3>iPhone 12 Pro</h3>
-                <ul  style={{textDecoration:"none"}}>
+                <ul style={{ textDecoration: "none" }}>
                   <li>На <b>11%</b> тоньше, чем iPhone 11</li>
                   <li>На <b>15%</b> меньше, чем iPhone 11</li>
                   <li>На <b>16%</b> легче, чем iPhone 11</li>

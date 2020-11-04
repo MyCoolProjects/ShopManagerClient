@@ -44,16 +44,16 @@ export default class Product extends Component {
               <Row>
                 <Col sm={4}>
                   <Carousel className="carousel mt-3 mb-5" style={{ height: "600px" }}>
-                    {this.props.currProduct.images.map(image => 
+                    {this.props.currProduct.images.map(image =>
                       <Carousel.Item key={image.id} className="product-carousel-item" style={{ height: "600px" }}>
-                      <Image
-                        fluid
-                        className="d-block"
-                        style={{ position: "relative", objectFit: "cover", height: "600px" }}
-                        src={`/image/${image.id}`}
-                        alt="First slide"
-                      />
-                    </Carousel.Item>
+                        <Image
+                          fluid
+                          className="d-block"
+                          style={{ position: "relative", objectFit: "cover", height: "600px" }}
+                          src={`/image/${image.id}`}
+                          alt="First slide"
+                        />
+                      </Carousel.Item>
                     )}
                   </Carousel>
                 </Col>
