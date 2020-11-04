@@ -51,7 +51,7 @@ class ProductsList extends Component {
     //     }
     //   )
 
-  };
+  }
 
 
   render() {

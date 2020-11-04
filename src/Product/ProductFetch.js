@@ -47,7 +47,7 @@ class ProductFetch extends Component {
                 //         }
                 //     )
             });
-    };
+    }
 
     render() {
         const { error, isLoaded, currProduct } = this.state;

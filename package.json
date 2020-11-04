@@ -13,7 +13,7 @@
     "react-responsive-modal": "^5.1.1",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.3",
+    "react-scripts": "^4.0.0",
     "react-scroll": "^1.8.1"
   },
   "scripts": {
@@ -38,5 +38,9 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:8080"
+  "proxy": "https://shop-manager-dev.herokuapp.com/",
+  "devDependencies": {
+    "eslint": "^7.12.1",
+    "eslint-plugin-react": "^7.21.5"
+  }
 }
