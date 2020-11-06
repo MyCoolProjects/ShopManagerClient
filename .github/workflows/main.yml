@@ -6,7 +6,7 @@ name: CI
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [ new-client ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -23,4 +23,4 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a single-line script
         run: |
-          curl -X POST -H "Accept: application/vnd.github.v3+json" -H 'authorization: Bearer ${{ secrets.TOKEN }}' https://api.github.com/repos/MyCoolProjects/ShopManager/dispatches -d '{"event_type":"ping_repo"}'
+          curl -X POST -H "Accept: application/vnd.github.v3+json" -H 'authorization: Bearer ${{ secrets.TOKEN }}' https://api.github.com/repos/MyCoolProjects/ShopManager/dispatches -d '{"event_type":"push-new-client"}'
