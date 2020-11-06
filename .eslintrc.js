@@ -42,7 +42,7 @@ module.exports = {
         "block-spacing": "error",
         "brace-style": "off",
         "callback-return": "error",
-        "camelcase": "off",
+        "camelcase": "error",
         "capitalized-comments": "off",
         "class-methods-use-this": "off",
         "comma-dangle": "off",

@@ -3,7 +3,7 @@ import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import westCoastLogo from '../westCoastImg/WestCoast.jpg';
-import icon_search from '../westCoastImg/search.png';
+import iconSearch from '../westCoastImg/search.png';
 export default class Header extends Component {
   render() {
     return (
@@ -25,7 +25,7 @@ export default class Header extends Component {
             <Form inline className="ml-auto mr-5" style={{ textAlign: 'right' }}>
               <FormControl type="text" placeholder="Search" className=" mr-sm-2" />
               <Button variant="secondary">
-                <span><img src={icon_search} alt="icon_search" style={{ width: '20%' }} /></span> Поиск<span></span>
+                <span><img src={iconSearch} alt="icon_search" style={{ width: '20%' }} /></span> Поиск<span></span>
               </Button>
             </Form>
 

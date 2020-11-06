@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './ProductCard.css';
-import sopping_cart from '../westCoastImg/shoppingCart.png';
+import shoppingCart from '../westCoastImg/shoppingCart.png';
 export default class ProductCard extends Component {
 
   render() {
@@ -48,7 +48,7 @@ export default class ProductCard extends Component {
             <b>{product.price} ₽</b>
           </Card.Text>
           <div className="pt-2 m-0" style={{ textAlign: 'center' }}>
-            <Button variant="secondary" id="addcart" ><img src={sopping_cart} alt="sopping_cart" style={{ width: '20%' }} /><b> В корзину</b></Button>
+            <Button variant="secondary" id="addcart" ><img src={shoppingCart} alt="sopping_cart" style={{ width: '20%' }} /><b> В корзину</b></Button>
           </div>
         </Card.Body>
       </Card >

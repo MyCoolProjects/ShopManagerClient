@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col, Container, Button, Carousel, Image } from 'react-bootstrap';
-import sopping_cart from '../westCoastImg/shoppingCart.png';
+import shoppingCart from '../westCoastImg/shoppingCart.png';
 import './Product.css';
 export default class Product extends Component {
   render() {
@@ -71,7 +71,7 @@ export default class Product extends Component {
                       <hr className="mt-1 p-0 m-0" />
                     </Col>
                     <Col sm style={{ textAlign: 'right' }}>
-                      <Button variant="secondary" id="addcart" ><img src={sopping_cart} alt="sopping_cart" style={{ width: '20%' }} /><b> В корзину</b></Button>
+                      <Button variant="secondary" id="addcart" ><img src={shoppingCart} alt="sopping_cart" style={{ width: '20%' }} /><b> В корзину</b></Button>
                     </Col>
                   </Row>
                 </Col>
