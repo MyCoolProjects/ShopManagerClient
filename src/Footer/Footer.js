@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Container, Row, Col, Image, Nav, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import westCoast1 from '../westCoastImg/WestCoastShortText.jpg';
 import westCoast2 from '../westCoastImg/WestCoastLogo.jpg';
-import instagram from '../westCoastImg/instagram.png'
-import vk from '../westCoastImg/vk.png'
-import twitter from '../westCoastImg/twitter.png'
-import facebook from '../westCoastImg/facebook.png'
+import instagram from '../westCoastImg/instagram.png';
+import vk from '../westCoastImg/vk.png';
+import twitter from '../westCoastImg/twitter.png';
+import facebook from '../westCoastImg/facebook.png';
 import './Footer.css';
 export default class Header extends Component {
     render() {
@@ -70,6 +70,6 @@ export default class Header extends Component {
                     </Container>
                 </Container>
             </>
-        )
+        );
     }
 }

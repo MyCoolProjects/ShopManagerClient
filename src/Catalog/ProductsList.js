@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import { Container, Row, Col, CardColumns, Form, Button, Spinner } from 'react-bootstrap'
+import React, { Component } from 'react';
+import { Container, Row, Col, CardColumns, Form, Button, Spinner } from 'react-bootstrap';
 // const Product_Card = lazy(() => import('./Product_Card.js'))
-import ProductCard from './ProductCard.js'
-import './ProductCard.css'
+import ProductCard from './ProductCard.js';
+import './ProductCard.css';
 
 class ProductsList extends Component {
   constructor(props) {
@@ -32,8 +32,8 @@ class ProductsList extends Component {
         this.setState({
           isLoaded: true,
           error
-        })
-      })
+        });
+      });
     // fetch("/Main.json")
     //   .then(res => res.json())
     //   .then(
@@ -61,7 +61,7 @@ class ProductsList extends Component {
     if (error) {
       return (
         <div>Error {error.message}</div>
-      )
+      );
     }
     else if (!isLoaded) {
       return (
@@ -77,7 +77,7 @@ class ProductsList extends Component {
             {' '} Loading...
             </Button>
         </Container>
-      )
+      );
     }
     else {
       return (
@@ -157,7 +157,7 @@ class ProductsList extends Component {
             </Row>
           </Container >
         </>
-      )
+      );
     }
   }
 }

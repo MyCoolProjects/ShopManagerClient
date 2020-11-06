@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import './ProductCard.css'
-import sopping_cart from '../westCoastImg/shoppingCart.png'
+import './ProductCard.css';
+import sopping_cart from '../westCoastImg/shoppingCart.png';
 export default class ProductCard extends Component {
 
   render() {
@@ -57,6 +57,6 @@ export default class ProductCard extends Component {
       <>
         {productItems}
       </>
-    )
+    );
   }
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Button, Spinner } from 'react-bootstrap';
 
-import Product from './Product.js'
+import Product from './Product.js';
 
 
 class ProductFetch extends Component {
@@ -29,7 +29,7 @@ class ProductFetch extends Component {
                 });
             })
             .catch(err => {
-                console.log(err)
+                console.log(err);
                 // fetch("/Main.json")
                 //     .then(res => res.json())
                 //     .then((result) => {
@@ -54,7 +54,7 @@ class ProductFetch extends Component {
         if (error) {
             return (
                 <div>Error {error.message}</div>
-            )
+            );
         }
         else if (!isLoaded) {
             return (
@@ -70,12 +70,12 @@ class ProductFetch extends Component {
                         {' '} Loading...
                     </Button>
                 </Container>
-            )
+            );
         }
         else {
             return (
                 <Product currProduct={currProduct} />
-            )
+            );
         }
     }
 }

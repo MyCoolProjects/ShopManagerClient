@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Container, Carousel, Image } from 'react-bootstrap';
 import './Home.css';
 export default class Home extends Component {
@@ -89,6 +89,6 @@ export default class Home extends Component {
           </Carousel>
         </Container>
       </Container>
-    )
+    );
   }
 }

@@ -7,10 +7,7 @@
 }
 .footer-delimiters {
   padding: 0;
-  margin-left: 0;
-  margin-right: 0;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin: 10px 20px;
 }
 .footer-text-disable {
   color: #dbdbdb;

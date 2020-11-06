@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import westCoastLogo from '../westCoastImg/WestCoast.jpg';
-import icon_search from '../westCoastImg/search.png'
+import icon_search from '../westCoastImg/search.png';
 export default class Header extends Component {
   render() {
     return (
@@ -37,6 +37,6 @@ export default class Header extends Component {
 
         </Navbar>
       </>
-    )
+    );
   }
 }

@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Row, Col, Container, Button, Carousel, Image } from 'react-bootstrap';
-import sopping_cart from '../westCoastImg/shoppingCart.png'
-import './Product.css'
+import sopping_cart from '../westCoastImg/shoppingCart.png';
+import './Product.css';
 export default class Product extends Component {
   render() {
     const specificationsArray = this.props.currProduct.specifications.map(spec => (
@@ -20,7 +20,7 @@ export default class Product extends Component {
         </Container>
       </>
 
-    ))
+    ));
     return (
       <>
         <Container fluid style={{ fontSize: 20 }} key={this.props.currProduct.id} expand="md">
@@ -82,6 +82,6 @@ export default class Product extends Component {
           </Row>
         </Container>
       </>
-    )
+    );
   }
 }
