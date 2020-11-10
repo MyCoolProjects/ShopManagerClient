@@ -1,9 +1,9 @@
 import React, { Component } from "react"
-import { Container, Row, Col, CardColumns, Form, Button, Spinner } from "react-bootstrap"
+import { Container, Row, Col, CardColumns, Button, Spinner, Form, FormControl } from "react-bootstrap"
 // const Product_Card = lazy(() => import('./Product_Card.js'))
 import ProductCard from "./ProductCard.js"
+import icon_search from '../westCoastImg/search.png'
 import './ProductCard.css'
-
 class ProductsList extends Component {
   constructor(props) {
     super(props);
@@ -65,7 +65,7 @@ class ProductsList extends Component {
     }
     else if (!isLoaded) {
       return (
-        <Container fluid className="mb-5 mt-5" style={{ textAlign: "center", verticalAlign: "middle", height: "757px", fontSize: 40 }}>
+        <Container fluid className="mb-5 mt-5" style={{ textAlign: "center", verticalAlign: "middle", height: "100%", fontSize: 40 }}>
           <Button variant="dark" disabled>
             <Spinner
               as="span"
@@ -141,7 +141,16 @@ class ProductsList extends Component {
                     <hr />
                   </Col>
                 </Row>
-                <Col sm={1}></Col>
+                <Row className="mt-3">
+                  <Col>
+                    <Form inline className="ml-auto mr-5" style={{ textAlign: "right" }}>
+                      <FormControl type="text" placeholder="Search" className=" mr-sm-2" />
+                      <Button variant="secondary">
+                        <span><img src={icon_search} alt="icon_search" style={{ width: "20%" }} />Поиск</span> 
+                      </Button>
+                    </Form>
+                  </Col>
+                </Row>
 
 
                 {/* список товаров */}

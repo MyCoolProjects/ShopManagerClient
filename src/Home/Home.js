@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import { Container, Carousel, Image, Card, CardDeck} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
+import { Container, Carousel, Image} from 'react-bootstrap';
+import FamousCategory from './FamousCategory.js'
+import PS5 from './PS5.js'
 import './Home.css';
 export default class Home extends Component {
   render() {
@@ -87,85 +88,10 @@ export default class Home extends Component {
           </Carousel>
 
           {/* РОФЛ с PS 5 можно спокойно удалить, потому что для нне придется создать отдельную категорию и прочее */}
-          <Card className="mt-5" fluid>
-            <Card.Img src="https://i0.wp.com/itc.ua/wp-content/uploads/2020/08/screen_shot_2020_08_26_at_5.29.22_pm.0.png" alt="PS5 image" />
-            <Card.ImgOverlay>
-              <Card.Title className="text-center"><h3>СКОРО В ПРОДАЖЕ</h3></Card.Title>
-            </Card.ImgOverlay>
-          </Card>
+          <PS5/>
 
-          <Container fluid className="p-0 m-0 mt-5 mb-5" expand="md">
-            <div><h3>ПОПУЛЯРНЫЕ КАТЕГОРИИ</h3></div>
-            <CardDeck className="mt-3" fluid >
-              {/* border-0 */}
-
-              <Card bg="white border-0">
-                <Link to="/catalog">
-                  <Card.Img
-                    variant="top"
-                    style={{ position: "center", objectFit: "cover", height: "100%", width: "100%" }}
-                    // 700*900
-                    src="https://items.s1.citilink.ru/1129835_v01_b.jpg"
-                    alt="Smartphones">
-                  </Card.Img>
-                </Link>
-                <Card.Body>
-                  <Link className="Card-Name p-0 m-0" to="/catalog">
-                    <Card.Title variant="bottom" style={{ fontSize: "26px" }}><h3>СМАРТФОНЫ</h3></Card.Title>
-                  </Link>
-                </Card.Body>
-              </Card>
-
-              <Card bg="white border-0">
-                <Link to="/catalog">
-                  <Card.Img
-                    variant="top"
-                    style={{ position: "center", objectFit: "cover", height: "100%", width: "100%" }}
-                    src="https://c.dns-shop.ru/thumb/st4/fit/800/650/5b1b7f06868dbb6c9df7e5604c2a04f2/3468acf9c94a7c8731b41886a717e0b471ac3f407d0aed6d8ee7aa0dd27e6212.jpg"
-                    alt="Laptops">
-                  </Card.Img>
-                </Link>
-                <Card.Body>
-                  <Link className="Card-Name p-0 m-0" to="/catalog">
-                    <Card.Title style={{ fontSize: "26px" }}><h3>НОУТБУКИ</h3></Card.Title>
-                  </Link>
-                </Card.Body>
-              </Card>
-
-              <Card bg="white border-0">
-                <Link to="/catalog">
-                  <Card.Img
-                    variant="top"
-                    style={{ position: "center", objectFit: "cover", height: "100%", width: "100%" }}
-                    src="https://www.nvidia.com/content/dam/en-zz/Solutions/GeForce/campaigns/10-series/geforce-gtx-1080-ti-2c50-P@2x.png"
-                    alt="Video cards">
-                  </Card.Img>
-                </Link>
-                <Card.Body>
-                  <Link className="Card-Name p-0 m-0" to="/catalog">
-                    <Card.Title style={{ fontSize: "26px" }}><h3>ВИДЕОКАРТЫ</h3></Card.Title>
-                  </Link>
-                </Card.Body>
-              </Card>
-
-              <Card bg="white border-0">
-                <Link to="/catalog">
-                  <Card.Img
-                    variant="top"
-                    style={{ position: "center", objectFit: "cover", height: "100%", width: "100%" }}
-                    src="https://img.mvideo.ru/Pdb/small_pic/600/30043267b.jpg"
-                    alt="Tablets">
-                  </Card.Img>
-                </Link>
-                <Card.Body>
-                  <Link className="Card-Name p-0 m-0" to="/catalog">
-                    <Card.Title style={{ fontSize: "26px" }}><h3>ПЛАНШЕТЫ И ЭЛЕКТРОННЫЕ КНИГИ</h3></Card.Title>
-                  </Link>
-                </Card.Body>
-              </Card>
-
-            </CardDeck>
-          </Container>
+          {/* Популярные категории */}
+          <FamousCategory/>
 
         </Container>
       </Container>
