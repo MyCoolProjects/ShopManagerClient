@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Container, Row, Col, CardColumns, Button, Spinner, Form, FormControl } from "react-bootstrap"
+import { Container, Row, Col, CardDeck, Button, Spinner, Form} from "react-bootstrap"
 // const Product_Card = lazy(() => import('./Product_Card.js'))
 import ProductCard from "./ProductCard.js"
 import icon_search from '../westCoastImg/search.png'
@@ -141,24 +141,13 @@ class ProductsList extends Component {
                     <hr />
                   </Col>
                 </Row>
-                <Row className="mt-3">
-                  <Col>
-                    <Form inline className="ml-auto mr-5" style={{ textAlign: "right" }}>
-                      <FormControl type="text" placeholder="Search" className=" mr-sm-2" />
-                      <Button variant="secondary">
-                        <span><img src={icon_search} alt="icon_search" style={{ width: "20%" }} />Поиск</span> 
-                      </Button>
-                    </Form>
-                  </Col>
-                </Row>
-
 
                 {/* список товаров */}
                 <Row>
                   <Col>
-                    <CardColumns className="space-behind-product-card">
+                    <CardDeck className="space-behind-product-card">
                       <ProductCard products={products} />
-                    </CardColumns>
+                    </CardDeck>
                   </Col>
                 </Row>
 
